@@ -98,7 +98,6 @@
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
-    /* let the about logo scale */
     .about img {
       margin: 0 auto 1rem;
       max-height: 200px;
@@ -203,7 +202,6 @@
       cursor: pointer;
     }
 
-    /* mobile adjustments */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -230,6 +228,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo">🔧 MG Engineering</div>
     <nav>
@@ -292,23 +291,50 @@
 
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <!-- Formspree integration: replace YOUR_FORM_ID with your actual endpoint -->
-    <form
-      action="https://formspree.io/f/mvgqgozq"
-      method="POST"
-    >
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" value="mgengineeringbrits@gmail.com" readonly required/>
+    <form action="https://formspree.io/f/mvgqgozq" method="POST">
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+      />
+      <input
+        type="email"
+        name="_replyto"
+        placeholder="Your Email"
+        required
+      />
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        required
+      ></textarea>
 
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <!-- honeypot to deter spam -->
-      <input type="text" name="_gotcha" style="display:none" />
+      <!-- route mail to your inbox -->
+      <input
+        type="hidden"
+        name="_to"
+        value="mgengineeringbrits@gmail.com"
+      />
+
+      <!-- spam honeypot -->
+      <input
+        type="text"
+        name="_gotcha"
+        style="display:none"
+      />
+
       <button type="submit">Send Message</button>
     </form>
+
     <div class="contact-details">
       <p>Email: mgengineeringbrits@gmail.com</p>
       <p>Contact: +27 79 821 0950</p>
-      <p>Location:<br>Prins Street 9<br>Brits, North-West, 0250</p>
+      <p>
+        Location:<br />
+        Prins Street 9<br />
+        Brits, North-West, 0250
+      </p>
     </div>
   </section>
 
@@ -338,9 +364,12 @@
     closeBtn.addEventListener('click', () => {
       lightbox.classList.add('hidden');
     });
+
     lightbox.addEventListener('click', e => {
       if (e.target === lightbox) lightbox.classList.add('hidden');
     });
   </script>
+
 </body>
 </html>
+```
