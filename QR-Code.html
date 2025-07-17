@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visit MG Engineering</title>
+
+  <!-- Open Graph for status preview -->
+  <meta property="og:title"       content="Scan or Click to Visit MG Engineering"/>
+  <meta property="og:description" content="Tap below or scan the QR code"/>
+  <meta property="og:image"       content="https://francois484.github.io/mg-engineering-site/qr-code.png"/>
+  <meta property="og:url"         content="https://francois484.github.io/mg-engineering-site/clickable.html"/>
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+    }
+    .qr-container {
+      background: #000;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.42);
+      max-width: 400px;
+      width: 100%;
+    }
+    .qr-container h1 {
+      color: black;
+      margin: 0 0 1rem;
+      text-shadow:
+        1px 1px 0 white,
+       -1px 1px 0 white,
+        1px -1px 0 white,
+       -1px -1px 0 white;
+    }
+    .qr-container img {
+      width: 250px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      cursor: pointer;
+      box-shadow:
+        0 0 40px rgba(0, 119, 182, 0.6),
+        0 0 80px rgba(0, 255, 255, 0.4),
+        0 0 120px rgba(255, 255, 255, 0.3);
+    }
+    .qr-container .site-link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #0077b6;
+      text-decoration: none;
+    }
+    .qr-container .site-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="qr-container">
+    <h1>Scan or Click to Visit</h1>
+    <a href="https://francois484.github.io/mg-engineering-site/" target="_blank">
+      <img src="./qr-code.png" alt="QR Code to MG Engineering">
+    </a>
+    <a
+      class="site-link"
+      href="https://francois484.github.io/mg-engineering-site/"
+      target="_blank"
+    >
+      MG ENGINEERING
+    </a>
+  </div>
+</body>
+</html>
