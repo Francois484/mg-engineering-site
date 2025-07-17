@@ -137,6 +137,7 @@
       transform: scale(1.02);
     }
 
+    /* Form styles */
     form {
       display: flex;
       flex-direction: column;
@@ -291,10 +292,16 @@
 
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
+    <!-- Formspree integration: replace YOUR_FORM_ID with your actual endpoint -->
+    <form
+      action="https://formspree.io/f/mvgqgozq"
+      method="POST"
+    >
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <!-- honeypot to deter spam -->
+      <input type="text" name="_gotcha" style="display:none" />
       <button type="submit">Send Message</button>
     </form>
     <div class="contact-details">
@@ -336,4 +343,3 @@
   </script>
 </body>
 </html>
-```
